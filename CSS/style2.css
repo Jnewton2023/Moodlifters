@@ -1,0 +1,157 @@
+body {
+    font-family: system-ui, sans-serif ;
+    margin: 0;
+    padding: 0;
+  }
+  .container{
+    background-color: darkslateblue;
+    background-image: url(../Images/blueskyclouds.jpg);
+    background-size: cover;
+    color: white; 
+
+      padding: 40px; /* padding value for background */
+    }
+  
+
+  
+  #button-container {
+    padding: 300px; /* padding value */
+    display: flex;
+    justify-content: center;
+  }
+  
+  #button-container a {
+    display: inline-block;
+    margin: 100px;
+  }
+  
+  #button-container img {
+    width: 100px;
+    height: 100px;
+  }
+
+  #button-container {
+    text-align: center;
+    margin-bottom: 120px;
+  }
+  
+  .icon-button {
+    display: inline-block;
+    margin: 100px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .icon-button img {
+    width: 50px; /* Adjust the size as per your preference */
+    height: 50px;
+    border-radius: 50%; /* Makes the image round */
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+  }
+  
+  .icon-button:hover {
+    transform: scale(1.1); /* Adds a slight scale effect on hover */
+  }
+  /* CSS styles */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.image-section {
+  flex: 1;
+  background-image: url(images/blueskyclouds.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.button-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  background-color: #f2f2f2;
+}
+
+.button-section button {
+  margin: 10px;
+  border: none;
+  background-color: transparent;
+}
+
+.bottom-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  background-image: url(images/image2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+   
+#button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#button-container a {
+  margin: 20px;
+}
+
+#button-container img {
+  width: 100px;
+  height: 100px;
+}
+.color-circles-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the color circles */
+}
+
+.color-circles {
+  display: flex;
+}
+
+.color-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.color-circle-blue {
+  background-color: blue;
+}
+
+.color-circle-red {
+  background-color: red;
+}
+
+.color-circle-green {
+  background-color: green;
+}
+
+.color-circle-purple {
+  background-color: purple;
+}
+
+.color-circle-yellow {
+  background-color: orange;
+}
+
+.circle-label {
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Breathing Room</title>
+  <link rel="stylesheet" href="CSS/style7.css">
+</head>
+<body>
+  <div class="container">
+    <h1 align="center">Breathing Room</h1>
+    <h1 align="center">Put yourself in this picture and just breathe ... Inhale 1, 2, 3 ....Exhale 1, 2, 3, 4...</h1>
+
+    <div class="container-sand">
+      <title>Looping Audio with Button</title>
+      <style>
+        .audio-control {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 25vh;
+        }
+        #playBtn {
+          background-image: url('Images/sound image.png');
+          width: 50px;
+          height: 50px;
+          background-size: cover;
+          border: none;
+          cursor: pointer;
+        }
+      </style>
+
+      <div class="audio-control">
+        <button id="playBtn"></button>
+        <audio id="audioPlayer" loop>
+          <source src="Audio/mixkit-small-waves-harbor-rocks-1208 (1).wav" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+    
+    <div id="button-container">
+      <a href="food.html"><img src="Images/fork-and-spoon.png" alt="Food Icon"></a>
+      <a href="books.html"><img src="Images/book and music.jpg" alt="Book Icon"></a>
+      <a href="school.html"><img src="Images/books.jpg" alt="School Icon"></a>
+      <a href="outdoor.html"><img src="Images/Outdoor.png" alt="Outdoor Icon"></a>
+      <a href="sky.html"><img src="Images/blueskyclouds.jpg" alt="Sky Icon"></a>
+    </div>
+  </div>
+
+  <script>
+    const playBtn = document.getElementById('playBtn');
+    const audioPlayer = document.getElementById('audioPlayer');
+    let videoElement = null;
+
+    playBtn.addEventListener('click', function() {
+      if (audioPlayer.paused) {
+        audioPlayer.play();
+        playBtn.classList.add('playing');
+
+        // Open video after 2 seconds
+        setTimeout(function() {
+          openVideo();
+        }, 2000);
+      } else {
+        audioPlayer.pause();
+        playBtn.classList.remove('playing');
+        closeVideo();
+      }
+    });
+
+    function openVideo() {
+      // Create video iframe
+      videoElement = document.createElement('iframe');
+      videoElement.src = 'https://www.youtube.com/embed/WALZwXyxpHQ'; // Replace with your YouTube video URL
+      videoElement.width = '100%';
+      videoElement.height = '100%';
+      videoElement.style.position = 'fixed';
+      videoElement.style.top = '0';
+      videoElement.style.left = '0';
+      videoElement.style.right = '0';
+      videoElement.style.bottom = '0';
+      videoElement.style.margin = 'auto';
+      videoElement.allowFullscreen = true;
+
+      // Append video to the body
+      document.body.appendChild(videoElement);
+
+      // Enlarge video to fill the page after 2 seconds
+      setTimeout(function() {
+        videoElement.style.width = '100vw';
+        videoElement.style.height = '100vh';
+      }, 2000);
+
+      // Close video after 12 seconds (10 seconds after enlarging)
+      setTimeout(function() {
+        closeVideo();
+      }, 12000);
+    }
+
+    function closeVideo() {
+      if (videoElement) {
+        // Remove video element from the body
+        document.body.removeChild(videoElement);
+        videoElement = null;
+      }
+    }
+  </script>
+</body>
+</html>
