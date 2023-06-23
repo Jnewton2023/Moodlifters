@@ -1,0 +1,75 @@
+/* Reset some default styles */
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F5F5F5;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #006400;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-top: 40px;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #006400;
+    color: #FFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #003300;
+  }
+  
+  #park-image {
+    max-width: 400px;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  #quote {
+    font-style: italic;
+    margin-top: 20px;
+  }
+  
+  .park-description {
+    margin-top: 40px;
+    text-align: left;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 24px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    .button {
+      font-size: 14px;
+    }
+  
+    #park-image {
+      max-width: 300px;
+    }
+  }
