@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Media</title>
+  <link rel="stylesheet" href="media.css">
 </head>
 <body>
   <nav>
